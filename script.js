@@ -1,4 +1,4 @@
-// Año automático en el footer
+// Automatically update the year in the footer
 
 const year = document.getElementById("year");
 
@@ -7,7 +7,7 @@ if (year) {
 }
 
 
-// Navegación móvil
+// Mobile navigation
 
 const menuToggle = document.querySelector(".menu-toggle");
 const mainNav = document.getElementById("main-nav");
@@ -29,7 +29,7 @@ if (menuToggle && mainNav) {
 }
 
 
-// Navegación interna con compensación de la barra fija mediante CSS
+// Internal navigation with fixed-navbar offset handled in CSS
 
 document.querySelectorAll('a[href^="#"]').forEach(link => {
 

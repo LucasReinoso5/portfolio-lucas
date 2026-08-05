@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirTS-Forecast Case Study | Lucas Reinoso Urabayen</title>
+    <meta name="description" content="AirTS-Forecast case study: air pollution forecasting with time-series analysis and deep learning in Toulouse.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html#home" class="logo" aria-label="Go to homepage">LR</a>
+            <a class="case-nav" href="index.html#projects">← Back to projects</a>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <header class="case-hero">
+            <div class="container">
+                <p class="eyebrow">TIME SERIES · DEEP LEARNING · ENVIRONMENTAL DATA</p>
+                <h1>AirTS-Forecast</h1>
+                <p class="case-intro">An end-to-end study comparing statistical forecasting and recurrent neural networks across five major air pollutants in Toulouse.</p>
+                <dl class="case-meta">
+                    <div><dt>Context</dt><dd>ENIT — Two-person supervised project</dd></div>
+                    <div><dt>Timeline</dt><dd>February–June 2026</dd></div>
+                    <div><dt>Data</dt><dd>21 Mar 2021–21 Mar 2026</dd></div>
+                </dl>
+            </div>
+        </header>
+
+        <section class="section">
+            <div class="container">
+                <article class="case-layout">
+                    <div><p class="case-kicker">01 — The challenge</p><h2>Forecast complex urban pollution dynamics</h2></div>
+                    <div class="case-copy">
+                        <p>Air pollution is shaped by seasonal cycles, meteorological conditions, and irregular human activity. The project investigated how classical time-series models and deep learning could forecast pollutant concentrations and support future decision-making applications.</p>
+                        <p>The study covered NO₂, NOx, O₃, PM10, and PM2.5 using five years of measurements from Toulouse.</p>
+                    </div>
+                </article>
+
+                <article class="case-layout">
+                    <div><p class="case-kicker">02 — My role</p><h2>Collaboration across the full workflow</h2></div>
+                    <div class="case-copy">
+                        <p>Developed as a two-person engineering project with Tiago Toloczko Ross under the supervision of Dr. Raymond Houé Ngouna. Both team members contributed throughout the complete lifecycle rather than dividing the project into isolated ownership areas.</p>
+                        <p>I worked across data acquisition and preparation, exploratory analysis, statistical forecasting, recurrent neural-network experiments, hyperparameter optimization, model evaluation, and technical reporting.</p>
+                    </div>
+                </article>
+
+                <article class="case-layout">
+                    <div><p class="case-kicker">03 — Approach</p><h2>One framework, multiple forecasting strategies</h2></div>
+                    <div class="case-copy">
+                        <ul>
+                            <li>Combined pollutant measurements from GEOD’AIR with meteorological variables from ERA5-Land.</li>
+                            <li>Studied trends, stationarity, seasonality, periodicity, and temporal memory using ADF, PSD, moving averages, STL, ACF, and PACF.</li>
+                            <li>Established statistical baselines with ARIMA, SARIMA, and Holt-Winters.</li>
+                            <li>Compared RNN, LSTM, Bi-LSTM, GRU, and hybrid RNN-LSTM architectures.</li>
+                            <li>Optimized model depth, hidden dimensions, batch size, look-back window, forecast horizon, and learning rate with Optuna.</li>
+                            <li>Tested both univariate and multivariate configurations using pollutant-specific environmental features.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="case-layout">
+                    <div><p class="case-kicker">04 — Evaluation</p><h2>Performance depends on the pollutant</h2></div>
+                    <div class="case-copy">
+                        <p>Models were compared using MAPE, RMSE, MAE, and R². Recurrent architectures captured nonlinear variability and high-frequency events more effectively than the smoother classical baselines, but accuracy differed substantially across pollutants.</p>
+                        <div class="metric-grid">
+                            <div class="metric"><strong>26–28%</strong><span>O₃ MAPE</span></div>
+                            <div class="metric"><strong>33–34%</strong><span>NO₂ / NOx MAPE</span></div>
+                            <div class="metric"><strong>34–36%</strong><span>PM10 MAPE</span></div>
+                            <div class="metric"><strong>38–39%</strong><span>PM2.5 MAPE</span></div>
+                        </div>
+                        <div class="case-highlight">
+                            <strong>More variables did not automatically mean better forecasts.</strong>
+                            <p>Meteorological inputs improved some LSTM and GRU configurations, while more complex architectures sometimes degraded. The effect depended on both the target pollutant and model architecture.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="case-layout">
+                    <div><p class="case-kicker">05 — Tools &amp; methods</p><h2>A complete data science workflow</h2></div>
+                    <div class="case-copy">
+                        <div class="project-tags"><span>Python</span><span>Pandas</span><span>PyTorch</span><span>Scikit-learn</span><span>Optuna</span><span>Jupyter</span><span>Git/GitHub</span><span>Time-Series Analysis</span></div>
+                        <div class="case-highlight"><p>Optuna’s Hyperband pruner was used to stop unpromising trials early, helping manage experiments whose training time could otherwise become computationally expensive.</p></div>
+                    </div>
+                </article>
+
+                <article class="case-layout">
+                    <div><p class="case-kicker">06 — What I learned</p><h2>Evaluate the system, not only the score</h2></div>
+                    <div class="case-copy">
+                        <p>The project reinforced that forecast quality cannot be understood through a single aggregate metric. Architecture complexity, temporal shifts, pollutant chemistry, training data, and computational cost all affect whether a model is genuinely useful.</p>
+                        <p>It also provided practical experience managing a complete engineering study in an international team, from initial scope and iterative experimentation to final documentation.</p>
+                        <div class="case-actions">
+                            <a class="btn secondary" href="Lucas-Reinoso-AirTS-Forecast-Report.pdf" target="_blank" rel="noopener noreferrer">Read full report (PDF · English) <span aria-hidden="true">↗</span></a>
+                            <a class="project-link case-footer-link" href="index.html#projects">Back to all projects <span aria-hidden="true">→</span></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer><div class="container footer-content"><p>© <span id="year"></span> Lucas Reinoso Urabayen</p><p>Mendoza, Argentina</p></div></footer>
+    <script src="script.js"></script>
+</body>
+</html>
